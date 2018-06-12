@@ -1,0 +1,111 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "breezy",
+            "intents": [
+                {
+                    "name": "UnsupportedIntent",
+                    "slots": [
+                        {
+                            "name": "UnsupportedWord",
+                            "type": "AMAZON.LITERAL"
+                        }
+                    ],
+                    "samples": [
+                        "{something|UnsupportedWord}",
+                        "{blah|UnsupportedWord}",
+                        "{front door|UnsupportedWord}",
+                        "{back door|UnsupportedWord}",
+                        "{front window|UnsupportedWord}",
+                        "{door|UnsupportedWord}",
+                        "{window|UnsupportedWord}",
+                        "{i'm something|UnsupportedWord}",
+                        "{i'm hungry|UnsupportedWord}",
+                        "{i'm having a day|UnsupportedWord}",
+                        "{what day is it|UnsupportedWord}",
+                        "{how are you |UnsupportedWord}",
+                        "{lunch|UnsupportedWord}",
+                        "{i have a thing|UnsupportedWord}",
+                        "{i have an eye|UnsupportedWord}",
+                        "{where is|UnsupportedWord}",
+                        "{adsfaej asdfjw ecnwlsk|UnsupportedWord}"
+                    ]
+                },
+                {
+                    "name": "GetFans",
+                    "slots": [],
+                    "samples": [
+                        " what fans do I have",
+                        " what are my fans",
+                        " do i have any fans",
+                        " what are the names of my fans",
+                        " can i haz fans",
+                        " do i haz fans",
+                        " what are my fan names"
+                    ]
+                },
+                {
+                    "name": "GetFanDetails",
+                    "slots": [
+                        {
+                            "name": "DeviceName",
+                            "type": "AMAZON.LITERAL"
+                        }
+                    ],
+                    "samples": [
+                        " tell me about fan {Living Room Fan|DeviceName}",
+                        " what is fan {Florida Room Fan|DeviceName} set to",
+                        " what is the {Florida Room Fan|DeviceName} set to",
+                        " what about {Living Room Fan|DeviceName}",
+                        " what is {Master Bedroom Fan|DeviceName} set to"
+                    ]
+                },
+                {
+                    "name": "SetFan",
+                    "slots": [
+                        {
+                            "name": "DeviceName",
+                            "type": "AMAZON.LITERAL"
+                        },
+                        {
+                            "name": "DeviceMode",
+                            "type": "AMAZON.LITERAL"
+                        },
+                        {
+                            "name": "DeviceSpeed",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        " set {Living Room Fan|DeviceName} to {High|DeviceMode}",
+                        " set fan {Living Room Fan|DeviceName} to {DeviceSpeed}",
+                        " set {Florida Room Fan|DeviceName} on {Low|DeviceMode}",
+                        " set {Master Bedroom Fan|DeviceName} on {Breeze|DeviceMode}",
+                        " turn {off|DeviceMode} the {Master Bedroom Fan|DeviceName}"
+                    ]
+                },
+                {
+                    "name": "QuitAppIntent",
+                    "slots": [],
+                    "samples": [
+                        " close",
+                        " goodbye"
+                    ]
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                }
+            ],
+            "types": []
+        }
+    }
+}

@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <title>Breezy for Amazon Echo</title>
+    <style type="text/css">
+      .center {
+        text-align: center;
+      }
+
+      .logoImage {
+        border: 0px;
+        width: 256px;
+        height: 256px;
+      }
+
+      h1 {
+        font-family: Impact, Charcoal, sans-serif;
+        font-size: 22pt;
+        font-weight: normal;
+      }
+
+      p {
+        font-family: Impact, Charcoal, sans-serif;
+        font-size: 16pt;
+        font-weight: normal;
+      }
+    </style>
+    <script type="text/javascript">
+      var st = "https://graph.api.smartthings.com/oauth/authorize";
+      var qs = "";
+
+      function getLoaded() {
+        qs = window.location.search;
+        document.getElementById("redirectLink").href = st + qs;
+        setTimeout(redirectUser, 10000);    
+      }
+
+      function redirectUser() {
+        window.location.href = st + qs
+      }
+    </script>
+  </head>
+  <body onload="getLoaded()">
+    <div class="center">
+      <img class="logoImage" src="/breezy/my-house-256.png"/>
+      <h1>
+        Welcome to Breezy for Amazon Echo
+      </h1>
+      <p>
+        You will be automatically redirected to the SmartThings authorization screen in 10 seconds or you can click <a id="redirectLink" href="#">here</a>.
+      </p>
+    </div>
+  </body>
+</html>
